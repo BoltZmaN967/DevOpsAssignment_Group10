@@ -37,8 +37,7 @@
 4) git branchB ... branchA: show the diff of what is in branchB that is not in branchB.
 5) git show [SHA] : show any object in git in human-readable format.
 
-# 
-
+ 
 
 
 
