@@ -5,8 +5,8 @@ Q) how does CI/CD work with git?
 - it runs tests , build your project and can deploy automatically 
 - if sometimes it fails then you will get notified immediately 
 
-![Image](Images/photo1.png)
-![Image](Images/photo2.png)
+![Imsge](Images/photo1.png)
+![Imsge](Images/photo2.png)
 
 
 1) jenekins : is an open source automation server with large plugin library
