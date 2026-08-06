@@ -1,12 +1,12 @@
 # UNIT - 3 (CI)
 
-Q) how does CI/CD work with git?
-- Everytime code is pushed to the git repository that contain the work CI/CD services like github actions . gitlab Ci
-- it runs tests , build your project and can deploy automatically 
-- if sometimes it fails then you will get notified immediately 
+# Q | how does CI/CD work with git?
+Ans | - Everytime code is pushed to the git repository that contain the work CI/CD services like github actions . gitlab Ci
+    - it runs tests , build your project and can deploy automatically 
+    - if sometimes it fails then you will get notified immediately 
 
-![Imsge](Images/photo1.png)
-![Imsge](Images/photo2.png)
+![Image](Images/photo1.png)
+![Image](Images/photo2.png)
 
 
 1) jenekins : is an open source automation server with large plugin library
@@ -32,4 +32,30 @@ Q) how does CI/CD work with git?
 7) secerets : APIs secret
 
 # Jenkins:
-1) 
+1) It is a open source automation server that automates software development tasks such as building , testing and deploying 
+2) It act as the control automation tool in a CI pipeline 
+
+# Q | why jenkins used?
+Ans | automatically detect code changes and build the application
+    | run automated tests 
+    | generate reports 
+    | deploy appplications 
+    | send notification if build fails
+    | integrate with git github , maven , docker , kubernetes and cloud platforms.
+
+# Advantages:
+- it is free and open source.
+- 1000s of plugins.
+- platform independence.
+- easy integration with devops.
+- support CI / CD pipelines.
+
+# github webhooks in jenkins :
+- github webhooks is a machinism that automatically informs jenkins whenever a change occurs in a github repository.
+- instead of jenkins repeateadly checking github for updates , github sends an http request (webhook) to jenkins immediately after events such as push.
+
+# jenkins workflow:
+1) developers commit code
+2) developers push code to github
+3) github sends a webhook notification to jenkins
+4) jenkins starts a CI / CD pipline automatically 
