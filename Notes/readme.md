@@ -19,6 +19,7 @@ Ans | - Everytime code is pushed to the git repository that contain the work CI/
 # Note : core functionality of CI/CD tools are : triger build , run test , provide feedback
 
 
+
 # Q | a student accidentally important source code after multiple commits , explan how git helps recover previous version
 # Q | developers working in startup on login cart and payment module explain complete git workflow using branch commit , push and merge
 
@@ -59,3 +60,16 @@ Ans | automatically detect code changes and build the application
 2) developers push code to github
 3) github sends a webhook notification to jenkins
 4) jenkins starts a CI / CD pipline automatically 
+
+# Jenkins Architecture:
+1) Controller: the main server schedules job , track results and handle plugins (brain of jenkins).
+2) Agent: a seperate machine or node , it runs the actual build and task send by the controller. 
+3) Communication: controller talks to the agent using SSH or JNLP / TCP.
+4) Jenkin Dashboard: 
+- status view : show the list of all defined projects and their current status.
+- build history : display recent builds , success rates and failure links. 
+- manage jenkins : centeral hub or global configuration , security and tool installation.
+5) jobs & pipleines : 
+- freestyle jobs : GUI driven task for simple sequnetial automation.
+- pipelines : these are the code driven workflows defined in the text file and stored in version control systems.
+- stages : 
