@@ -6,8 +6,6 @@ Ans | - Everytime code is pushed to the git repository that contain the work CI/
     - if sometimes it fails then you will get notified immediately 
 
 ![Image](Images/photo1.png)
-![Image](Images/photo2.png)
-
 
 1) jenekins : is an open source automation server with large plugin library
 2) Github actions: build into github , uses YAML files (.github/workflows/)
@@ -72,4 +70,18 @@ Ans | automatically detect code changes and build the application
 5) jobs & pipleines : 
 - freestyle jobs : GUI driven task for simple sequnetial automation.
 - pipelines : these are the code driven workflows defined in the text file and stored in version control systems.
-- stages : 
+- stages : logical division in pipeline
+
+# Jenkins File basic :
+1) defination : a text file that contains is the defination of jenikins pipline.
+2) Syntax : declaritive and scripted command detail.
+- declaritive : structured strict.
+- scripted : groovy based and flexible.
+3) Stages Block : contain individual steps like " sh npm install "
+
+# syntax :
+</> groovy 
+sh ' npm ' install 
+"sh" -> stands for shell and it is used to execute linux / shell commands 
+"npm" -> node package manager 
+"install" -> down bad and install all the project dependencies listed in the package.json file.
