@@ -16,8 +16,6 @@ Ans | - Everytime code is pushed to the git repository that contain the work CI/
 
 # Note : core functionality of CI/CD tools are : triger build , run test , provide feedback
 
-
-
 # Q | a student accidentally important source code after multiple commits , explan how git helps recover previous version
 # Q | developers working in startup on login cart and payment module explain complete git workflow using branch commit , push and merge
 
