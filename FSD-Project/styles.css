@@ -1,0 +1,4 @@
+/* Minimal CSS reset */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
