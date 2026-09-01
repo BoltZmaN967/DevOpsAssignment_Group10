@@ -16,8 +16,6 @@ Ans | - Everytime code is pushed to the git repository that contain the work CI/
 
 # Note : core functionality of CI/CD tools are : triger build , run test , provide feedback
 
-
-
 # Q | a student accidentally important source code after multiple commits , explan how git helps recover previous version
 # Q | developers working in startup on login cart and payment module explain complete git workflow using branch commit , push and merge
 
@@ -86,4 +84,18 @@ sh ' npm ' install
 "npm" -> node package manager 
 "install" -> down bad and install all the project dependencies listed in the package.json file.
 
-#trial
+# block architecture of Jenkins: text based
+1) jenkins operates on distributed-controller agent architecture designed to handle heavy automative workloads by offloading execution tasks from the main orchestrator to work nodes. 
+2) the text based informative diagram describe below that explained end to end flow of data and execution inside a devops CI/CD environment.
+
+# Jenkins distributed CI/CD architecture diagram:
+![pdf](Images/photo2.png)
+
+# core components:
+A robust jenkins ecosystem relies on several integrated architectural componets :
+1) jenkins controller (master) : the brain of the environemnt . it handles scheduling jobs , hosting the web GUI , tracking configuration and orchestretion pipelines. It not run resource 
+2) Jenkin agents (slave) : small java executables operating on isolation VMs , container , or rare metal setup (computer system or server where s/w or OS run directly on physical hardware without any virtualization layer). they receive build instruction from controller and handle the physical workload bearing OS.
+3) plugins : are the modules extending the jenkins function over 1800 official integeatable links (Jenkinis to Git , docker , kubernetees and cloud providers).
+4) build queue: a transiant storage structure where trigger workflows reside until until a eligible agent becomes free to take the task . 
+
+# Q | what is the difference between orchastiration and automation ?
