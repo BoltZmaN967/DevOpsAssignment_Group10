@@ -10,6 +10,17 @@
   <div class="max-w-5xl mx-auto">
     <h1 class="text-3xl font-bold text-center mb-6">Photo Gallery</h1>
     
+    <!-- Search Bar -->
+<div class="flex justify-center mb-4">
+  <input
+    id="searchInput"
+    type="text"
+    placeholder="Search photos..."
+    oninput="searchPhotos()"
+    class="w-full max-w-md px-4 py-2 border border-gray-300 rounded-lg"
+  >
+</div>
+
     <!-- Category Filter Buttons -->
     <div id="filters" class="flex flex-wrap justify-center gap-2 mb-8"></div>
 
@@ -46,6 +57,24 @@
       } catch (err) {}
       render();
     }
+    
+    function searchPhotos() {
+  const searchText = document.getElementById('searchInput').value.toLowerCase();
+
+  const filtered = photos.filter(p =>
+    p.title.toLowerCase().includes(searchText)
+  );
+
+  document.getElementById('gallery').innerHTML = filtered.map(p => `
+    <div class="bg-white rounded-xl shadow overflow-hidden group hover:shadow-lg transition">
+      <img src="${p.url}" alt="${p.title}" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
+      <div class="p-3">
+        <h3 class="font-semibold text-gray-800 text-sm truncate">${p.title}</h3>
+        <span class="text-xs text-blue-600 font-medium">${p.category}</span>
+      </div>
+    </div>
+  `).join('');
+   }
 
     function filterCategory(cat) {
       currentCategory = cat;
