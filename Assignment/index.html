@@ -27,6 +27,22 @@
     <!-- Gallery Grid -->
     <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
   </div>
+    
+    <!-- Image Preview Modal -->
+<div id="imageModal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50">
+  <div class="bg-white rounded-xl max-w-2xl w-full p-4 relative">
+    <button onclick="closeModal()" class="absolute top-2 right-3 text-2xl font-bold text-gray-600 hover:text-black">
+      &times;
+    </button>
+
+    <img id="modalImage" src="" alt="" class="w-full max-h-[70vh] object-contain rounded-lg">
+
+    <div class="mt-3">
+      <h2 id="modalTitle" class="text-xl font-bold"></h2>
+      <p id="modalCategory" class="text-blue-600 font-medium"></p>
+    </div>
+  </div>
+</div>
 
   <script>
     const categories = ['All', 'Nature', 'Architecture', 'Animals', 'Travel'];
@@ -66,7 +82,7 @@
   );
 
   document.getElementById('gallery').innerHTML = filtered.map(p => `
-    <div class="bg-white rounded-xl shadow overflow-hidden group hover:shadow-lg transition">
+    <div onclick="openModal('${p.url}', '${p.title}', '${p.category}')" class="bg-white rounded-xl shadow overflow-hidden group hover:shadow-lg transition cursor-pointer">
       <img src="${p.url}" alt="${p.title}" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
       <div class="p-3">
         <h3 class="font-semibold text-gray-800 text-sm truncate">${p.title}</h3>
@@ -75,6 +91,17 @@
     </div>
   `).join('');
    }
+
+   function openModal(url, title, category) {
+  document.getElementById('modalImage').src = url;
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalCategory').textContent = category;
+  document.getElementById('imageModal').classList.remove('hidden');
+}
+
+function closeModal() {
+  document.getElementById('imageModal').classList.add('hidden');
+}
 
     function filterCategory(cat) {
       currentCategory = cat;
@@ -95,7 +122,7 @@
 
       const filtered = currentCategory === 'All' ? photos : photos.filter(p => p.category === currentCategory);
       document.getElementById('gallery').innerHTML = filtered.map(p => `
-        <div class="bg-white rounded-xl shadow overflow-hidden group hover:shadow-lg transition">
+        <div onclick="openModal('${p.url}', '${p.title}', '${p.category}')" class="bg-white rounded-xl shadow overflow-hidden group hover:shadow-lg transition cursor-pointer">
           <img src="${p.url}" alt="${p.title}" class="w-full h-48 object-cover group-hover:scale-105 transition duration-300">
           <div class="p-3">
             <h3 class="font-semibold text-gray-800 text-sm truncate">${p.title}</h3>
