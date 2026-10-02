@@ -16,3 +16,4 @@ Depending on what exactly you want to know about your Git repository, you will u
 
 ## 4. Advanced: Built-in Repo Summary
 * **`git repo info`** – A newer, experimental command available in recent Git versions that explicitly retrieves overall configuration and structural summaries of the repository.
+
