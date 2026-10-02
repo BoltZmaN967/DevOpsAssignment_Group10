@@ -1,0 +1,5 @@
+this project is used to implement login page with help of fast api 
+To run in terminal ->>
+ step 1) -> cd (PATH OF FOLDER)
+ step 2) -> python -m uvicorn main:app --reload ( started web server)
+ 
